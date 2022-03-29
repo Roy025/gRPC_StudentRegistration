@@ -29,7 +29,7 @@ public class Service extends userGrpc.userImplBase {
                 response.setResponseCode(0).setResponsemessage("User already Logged in.");
             } else {
                 PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO loginrequest VALUES('"+username+"', '"+password+"')");
-                prep.executeUpdate();
+                prep.executeQuery();
                 response.setResponseCode(1).setResponsemessage(username + " successfully logged in.");
             }
             break;
@@ -62,7 +62,7 @@ public class Service extends userGrpc.userImplBase {
                 }
                 else{
                     PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO regrequest VALUES('"+name+"', '"+RegID+"')");
-                    prep.executeUpdate();
+                    prep.executeQuery();
                     regresponse.setResponseCode(1).setResponsemessage(name +"  " + RegID + " successfully registered.");
                 }
                     break;
