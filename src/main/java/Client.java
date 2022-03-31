@@ -21,7 +21,7 @@ public class Client {
         System.out.println(response.getResponseCode() + "  " + response.getResponsemessage());
 
         //Register
-        System.out.println("Name - ");
+        System.out.println("Subject Name - ");
         String name = sc.next();
         System.out.println("Registration Id - ");
         int RegID = sc.nextInt();
